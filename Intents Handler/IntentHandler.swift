@@ -21,11 +21,15 @@ class IntentHandler: INExtension, INStartWorkoutIntentHandling, INEndWorkoutInte
    
     
     func handle(intent: INStartWorkoutIntent, completion: @escaping (INStartWorkoutIntentResponse) -> Void) {
+        
         print("Start Work out:", intent )
         
         let userActivity: NSUserActivity? = nil
         
         guard let spokenPhrase = intent.workoutName?.spokenPhrase else {
+            
+            // failureNoMachingWorkout Sorry IOSSiriTest couldnt find a matching workout
+            
             completion(INStartWorkoutIntentResponse(code: .failureNoMatchingWorkout, userActivity: userActivity))
             return
         }
@@ -35,8 +39,13 @@ class IntentHandler: INExtension, INStartWorkoutIntentHandling, INEndWorkoutInte
         completion(INStartWorkoutIntentResponse(code: .continueInApp, userActivity: userActivity))
 
     }
+
     
     func handle(intent: INEndWorkoutIntent, completion: @escaping (INEndWorkoutIntentResponse) -> Void) {
+        
+        
+        
+        
         
     }
     

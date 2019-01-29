@@ -8,23 +8,32 @@
 
 import UIKit
 
+
+
 class BoardingViewController: UIViewController {
 
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    var counter = 0
+    var timer = Timer()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // called every time interval from the timer
+    @objc func timerAction() {
+        counter += 1
+        timerLabel.text = "\(counter)"
     }
-    */
+    
+    func cancelTimer() {
+        timer.invalidate()
+    }
+    
 
 }
