@@ -7,15 +7,105 @@
 //
 
 import UIKit
+import Intents
+
+enum statusSiri:String {
+    
+    case none, boarding, landing, emergency
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var flagStatus: statusSiri = statusSiri.none
     var window: UIWindow?
 
+    //SiriKIT
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        self.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
+        guard let intent = userActivity.interaction?.intent as? INStartWorkoutIntent else {
+            print("AppDelegate: Start Workout Intent - FALSE")
+            return false
+        }
+        print("AppDelegate: Start Workout Intent - TRUE")
+        print(intent)
+        print("Name")
+        print(intent.workoutName!)
+        
+        
+        if let intName = intent.workoutName {
+            
+            print(intName.spokenPhrase)
+            
+            if intName.spokenPhrase == "boarding" {
+                
+               flagStatus = statusSiri.boarding
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let boardingVC: BoardingViewController = storyboard.instantiateViewController(withIdentifier: "BoardingViewController") as! BoardingViewController
+            
+                
+                self.window?.rootViewController?.present(boardingVC, animated: true, completion: nil)
+                
+
+            } else if intName.spokenPhrase == "landing" {
+                
+                flagStatus = statusSiri.landing
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let landingVC: LandingViewController = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+    
+                self.window?.rootViewController?.present(landingVC, animated: true, completion: nil)
+
+                
+            } else if intName.spokenPhrase == "emergency" {
+                
+                flagStatus = statusSiri.emergency
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let emergencyVC: EmergencyViewController = storyboard.instantiateViewController(withIdentifier: "EmergencyViewController") as! EmergencyViewController
+                
+                self.window?.rootViewController?.present(emergencyVC, animated: true, completion: nil)
+
+            }
+        }
+        
+        
+        return true
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        if flagStatus == statusSiri.boarding {
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let boardingVC: BoardingViewController = storyboard.instantiateViewController(withIdentifier: "BoardingViewController") as! BoardingViewController
+//            
+//            self.window?.rootViewController?.present(boardingVC, animated: true, completion: nil)
+//            
+//        } else if flagStatus == statusSiri.landing {
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let landingVC: LandingViewController = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+//            
+//            self.window?.rootViewController?.present(landingVC, animated: true, completion: nil)
+//            
+//        } else if flagStatus == statusSiri.emergency {
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let emergencyVC: EmergencyViewController = storyboard.instantiateViewController(withIdentifier: "EmergencyViewController") as! EmergencyViewController
+//
+//            self.window?.rootViewController?.present(emergencyVC, animated: true, completion: nil)
+////
+//        }
+//        
+//        
+//        
+//        
+        
+        
         return true
     }
 

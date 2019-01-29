@@ -7,12 +7,38 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+//        let string = "2018080600000000"
+//        let dateFormatter:DateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyyMMddHHmmssSSS"
+//        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+//        let dateFinal = dateFormatter.date(from: string)!
+//        
+//        print(dateFinal)
+//        
+        
+        
+
+        //Request Siri authorization
+        INPreferences.requestSiriAuthorization { (status) in
+            
+            print(status)
+            
+        }
+        //Add vocabulary
+        INVocabulary.shared().setVocabularyStrings(["boarding", "landing", "emergency"], of: .workoutActivityName)
+
     }
 
 

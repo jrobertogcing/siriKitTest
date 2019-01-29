@@ -12,7 +12,36 @@
 		881DADC121FF57F3009CFFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881DADBF21FF57F3009CFFBC /* Main.storyboard */; };
 		881DADC321FF57F4009CFFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DADC221FF57F4009CFFBC /* Assets.xcassets */; };
 		881DADC621FF57F4009CFFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881DADC421FF57F4009CFFBC /* LaunchScreen.storyboard */; };
+		881DADD521FF5B30009CFFBC /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADD421FF5B30009CFFBC /* IntentHandler.swift */; };
+		881DADD921FF5B30009CFFBC /* Intents Handler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 881DADD221FF5B2F009CFFBC /* Intents Handler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		881DADDF21FF9B26009CFFBC /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */; };
+		881DADE121FF9B33009CFFBC /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE021FF9B33009CFFBC /* LandingViewController.swift */; };
+		881DADE321FF9B3C009CFFBC /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		881DADD721FF5B30009CFFBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 881DADB021FF57F3009CFFBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 881DADD121FF5B2F009CFFBC;
+			remoteInfo = "Intents Handler";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		881DADDD21FF5B30009CFFBC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				881DADD921FF5B30009CFFBC /* Intents Handler.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		881DADB821FF57F3009CFFBC /* IOSSiriTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSSiriTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +51,24 @@
 		881DADC221FF57F4009CFFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881DADC521FF57F4009CFFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881DADC721FF57F4009CFFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		881DADCD21FF580A009CFFBC /* IOSSiriTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOSSiriTest.entitlements; sourceTree = "<group>"; };
+		881DADD221FF5B2F009CFFBC /* Intents Handler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Intents Handler.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		881DADD421FF5B30009CFFBC /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		881DADD621FF5B30009CFFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
+		881DADE021FF9B33009CFFBC /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		881DADB521FF57F3009CFFBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		881DADCF21FF5B2F009CFFBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				881DADBA21FF57F3009CFFBC /* IOSSiriTest */,
+				881DADD321FF5B2F009CFFBC /* Intents Handler */,
 				881DADB921FF57F3009CFFBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				881DADB821FF57F3009CFFBC /* IOSSiriTest.app */,
+				881DADD221FF5B2F009CFFBC /* Intents Handler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +99,11 @@
 		881DADBA21FF57F3009CFFBC /* IOSSiriTest */ = {
 			isa = PBXGroup;
 			children = (
+				881DADCD21FF580A009CFFBC /* IOSSiriTest.entitlements */,
 				881DADBB21FF57F3009CFFBC /* AppDelegate.swift */,
+				881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */,
+				881DADE021FF9B33009CFFBC /* LandingViewController.swift */,
+				881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */,
 				881DADBD21FF57F3009CFFBC /* ViewController.swift */,
 				881DADBF21FF57F3009CFFBC /* Main.storyboard */,
 				881DADC221FF57F4009CFFBC /* Assets.xcassets */,
@@ -62,6 +111,15 @@
 				881DADC721FF57F4009CFFBC /* Info.plist */,
 			);
 			path = IOSSiriTest;
+			sourceTree = "<group>";
+		};
+		881DADD321FF5B2F009CFFBC /* Intents Handler */ = {
+			isa = PBXGroup;
+			children = (
+				881DADD421FF5B30009CFFBC /* IntentHandler.swift */,
+				881DADD621FF5B30009CFFBC /* Info.plist */,
+			);
+			path = "Intents Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +132,34 @@
 				881DADB421FF57F3009CFFBC /* Sources */,
 				881DADB521FF57F3009CFFBC /* Frameworks */,
 				881DADB621FF57F3009CFFBC /* Resources */,
+				881DADDD21FF5B30009CFFBC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				881DADD821FF5B30009CFFBC /* PBXTargetDependency */,
 			);
 			name = IOSSiriTest;
 			productName = IOSSiriTest;
 			productReference = 881DADB821FF57F3009CFFBC /* IOSSiriTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		881DADD121FF5B2F009CFFBC /* Intents Handler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 881DADDA21FF5B30009CFFBC /* Build configuration list for PBXNativeTarget "Intents Handler" */;
+			buildPhases = (
+				881DADCE21FF5B2F009CFFBC /* Sources */,
+				881DADCF21FF5B2F009CFFBC /* Frameworks */,
+				881DADD021FF5B2F009CFFBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Intents Handler";
+			productName = "Intents Handler";
+			productReference = 881DADD221FF5B2F009CFFBC /* Intents Handler.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +172,14 @@
 				ORGANIZATIONNAME = "Jose Gonzalez";
 				TargetAttributes = {
 					881DADB721FF57F3009CFFBC = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					881DADD121FF5B2F009CFFBC = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -113,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				881DADB721FF57F3009CFFBC /* IOSSiriTest */,
+				881DADD121FF5B2F009CFFBC /* Intents Handler */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		881DADD021FF5B2F009CFFBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +228,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881DADDF21FF9B26009CFFBC /* BoardingViewController.swift in Sources */,
 				881DADBE21FF57F3009CFFBC /* ViewController.swift in Sources */,
+				881DADE121FF9B33009CFFBC /* LandingViewController.swift in Sources */,
 				881DADBC21FF57F3009CFFBC /* AppDelegate.swift in Sources */,
+				881DADE321FF9B3C009CFFBC /* EmergencyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		881DADCE21FF5B2F009CFFBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881DADD521FF5B30009CFFBC /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		881DADD821FF5B30009CFFBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 881DADD121FF5B2F009CFFBC /* Intents Handler */;
+			targetProxy = 881DADD721FF5B30009CFFBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		881DADBF21FF57F3009CFFBC /* Main.storyboard */ = {
@@ -281,8 +393,11 @@
 		881DADCB21FF57F4009CFFBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOSSiriTest/IOSSiriTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
 				INFOPLIST_FILE = IOSSiriTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,8 +413,11 @@
 		881DADCC21FF57F4009CFFBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOSSiriTest/IOSSiriTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
 				INFOPLIST_FILE = IOSSiriTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +425,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gonet.IOSSiriTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		881DADDB21FF5B30009CFFBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
+				INFOPLIST_FILE = "Intents Handler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gonet.IOSSiriTest.Intents-Handler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		881DADDC21FF5B30009CFFBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
+				INFOPLIST_FILE = "Intents Handler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gonet.IOSSiriTest.Intents-Handler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +485,15 @@
 			buildConfigurations = (
 				881DADCB21FF57F4009CFFBC /* Debug */,
 				881DADCC21FF57F4009CFFBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		881DADDA21FF5B30009CFFBC /* Build configuration list for PBXNativeTarget "Intents Handler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				881DADDB21FF5B30009CFFBC /* Debug */,
+				881DADDC21FF5B30009CFFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
