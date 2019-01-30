@@ -18,6 +18,10 @@
 		881DADE121FF9B33009CFFBC /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE021FF9B33009CFFBC /* LandingViewController.swift */; };
 		881DADE321FF9B3C009CFFBC /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */; };
 		881DADE72201189E009CFFBC /* ListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE62201189E009CFFBC /* ListsManager.swift */; };
+		881DADF32202568D009CFFBC /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881DADF22202568D009CFFBC /* IntentsUI.framework */; };
+		881DADF62202568D009CFFBC /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADF52202568D009CFFBC /* IntentViewController.swift */; };
+		881DADF92202568D009CFFBC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881DADF72202568D009CFFBC /* MainInterface.storyboard */; };
+		881DADFD2202568D009CFFBC /* Intents Handler UI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 881DADF02202568D009CFFBC /* Intents Handler UI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 881DADD121FF5B2F009CFFBC;
 			remoteInfo = "Intents Handler";
+		};
+		881DADFB2202568D009CFFBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 881DADB021FF57F3009CFFBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 881DADEF2202568D009CFFBC;
+			remoteInfo = "Intents Handler UI";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,6 +49,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				881DADD921FF5B30009CFFBC /* Intents Handler.appex in Embed App Extensions */,
+				881DADFD2202568D009CFFBC /* Intents Handler UI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +72,11 @@
 		881DADE021FF9B33009CFFBC /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		881DADE62201189E009CFFBC /* ListsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsManager.swift; sourceTree = "<group>"; };
+		881DADF02202568D009CFFBC /* Intents Handler UI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Intents Handler UI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		881DADF22202568D009CFFBC /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		881DADF52202568D009CFFBC /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		881DADF82202568D009CFFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		881DADFA2202568D009CFFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		881DADED2202568D009CFFBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881DADF32202568D009CFFBC /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +110,8 @@
 			children = (
 				881DADBA21FF57F3009CFFBC /* IOSSiriTest */,
 				881DADD321FF5B2F009CFFBC /* Intents Handler */,
+				881DADF42202568D009CFFBC /* Intents Handler UI */,
+				881DADF12202568D009CFFBC /* Frameworks */,
 				881DADB921FF57F3009CFFBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +121,7 @@
 			children = (
 				881DADB821FF57F3009CFFBC /* IOSSiriTest.app */,
 				881DADD221FF5B2F009CFFBC /* Intents Handler.appex */,
+				881DADF02202568D009CFFBC /* Intents Handler UI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +153,24 @@
 			path = "Intents Handler";
 			sourceTree = "<group>";
 		};
+		881DADF12202568D009CFFBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				881DADF22202568D009CFFBC /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		881DADF42202568D009CFFBC /* Intents Handler UI */ = {
+			isa = PBXGroup;
+			children = (
+				881DADF52202568D009CFFBC /* IntentViewController.swift */,
+				881DADF72202568D009CFFBC /* MainInterface.storyboard */,
+				881DADFA2202568D009CFFBC /* Info.plist */,
+			);
+			path = "Intents Handler UI";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +187,7 @@
 			);
 			dependencies = (
 				881DADD821FF5B30009CFFBC /* PBXTargetDependency */,
+				881DADFC2202568D009CFFBC /* PBXTargetDependency */,
 			);
 			name = IOSSiriTest;
 			productName = IOSSiriTest;
@@ -164,6 +211,23 @@
 			productReference = 881DADD221FF5B2F009CFFBC /* Intents Handler.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		881DADEF2202568D009CFFBC /* Intents Handler UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 881DAE002202568D009CFFBC /* Build configuration list for PBXNativeTarget "Intents Handler UI" */;
+			buildPhases = (
+				881DADEC2202568D009CFFBC /* Sources */,
+				881DADED2202568D009CFFBC /* Frameworks */,
+				881DADEE2202568D009CFFBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Intents Handler UI";
+			productName = "Intents Handler UI";
+			productReference = 881DADF02202568D009CFFBC /* Intents Handler UI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +249,9 @@
 					881DADD121FF5B2F009CFFBC = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					881DADEF2202568D009CFFBC = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 881DADB321FF57F3009CFFBC /* Build configuration list for PBXProject "IOSSiriTest" */;
@@ -202,6 +269,7 @@
 			targets = (
 				881DADB721FF57F3009CFFBC /* IOSSiriTest */,
 				881DADD121FF5B2F009CFFBC /* Intents Handler */,
+				881DADEF2202568D009CFFBC /* Intents Handler UI */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +289,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		881DADEE2202568D009CFFBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881DADF92202568D009CFFBC /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +324,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		881DADEC2202568D009CFFBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881DADF62202568D009CFFBC /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -255,6 +339,11 @@
 			isa = PBXTargetDependency;
 			target = 881DADD121FF5B2F009CFFBC /* Intents Handler */;
 			targetProxy = 881DADD721FF5B30009CFFBC /* PBXContainerItemProxy */;
+		};
+		881DADFC2202568D009CFFBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 881DADEF2202568D009CFFBC /* Intents Handler UI */;
+			targetProxy = 881DADFB2202568D009CFFBC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -273,6 +362,14 @@
 				881DADC521FF57F4009CFFBC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		881DADF72202568D009CFFBC /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				881DADF82202568D009CFFBC /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -472,6 +569,44 @@
 			};
 			name = Release;
 		};
+		881DADFE2202568D009CFFBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
+				INFOPLIST_FILE = "Intents Handler UI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gonet.IOSSiriTest.Intents-Handler-UI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		881DADFF2202568D009CFFBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KAGQ44QH8;
+				INFOPLIST_FILE = "Intents Handler UI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gonet.IOSSiriTest.Intents-Handler-UI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,6 +633,15 @@
 			buildConfigurations = (
 				881DADDB21FF5B30009CFFBC /* Debug */,
 				881DADDC21FF5B30009CFFBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		881DAE002202568D009CFFBC /* Build configuration list for PBXNativeTarget "Intents Handler UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				881DADFE2202568D009CFFBC /* Debug */,
+				881DADFF2202568D009CFFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

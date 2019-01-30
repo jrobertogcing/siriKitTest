@@ -17,38 +17,26 @@ import Intents
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-class IntentHandler: INExtension, INStartWorkoutIntentHandling, INEndWorkoutIntentHandling, INCreateTaskListIntentHandling {
+class IntentHandler: INExtension, INSendPaymentIntentHandling  {
     
     
-    func handle(intent: INCreateTaskListIntent, completion: @escaping (INCreateTaskListIntentResponse) -> Void) {
-      
+    
+    func handle(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
+        
+        // Check that we have valid values for payee and currencyAmount
+        guard let payee = intent.payee, let amount = intent.currencyAmount else {
+            return completion(INSendPaymentIntentResponse(code: .unspecified, userActivity: nil))
+        }
+        // Make your payment!
+        print("Sending \(amount) payment to \(payee)!")
+        completion(INSendPaymentIntentResponse(code: .success, userActivity: nil))
         
         
     }
+    
+    
     
    
-    
-    
-    
-    func handle(intent: INStartWorkoutIntent, completion: @escaping (INStartWorkoutIntentResponse) -> Void) {
-        print("Start Work out:", intent )
-        
-        let userActivity: NSUserActivity? = nil
-        
-        guard let spokenPhrase = intent.workoutName?.spokenPhrase else {
-            completion(INStartWorkoutIntentResponse(code: .failureNoMatchingWorkout, userActivity: userActivity))
-            return
-        }
-        
-        print(spokenPhrase)
-        
-        completion(INStartWorkoutIntentResponse(code: .continueInApp, userActivity: userActivity))
 
-    }
-    
-    func handle(intent: INEndWorkoutIntent, completion: @escaping (INEndWorkoutIntentResponse) -> Void) {
-        
-    }
-    
-
+   
 }
