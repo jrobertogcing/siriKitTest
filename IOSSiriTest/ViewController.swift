@@ -8,6 +8,9 @@
 
 import UIKit
 import Intents
+import Firebase
+import Crashlytics
+import Fabric
 
 class ViewController: UIViewController {
 
@@ -16,18 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let string = "2018080600000000"
-//        let dateFormatter:DateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyyMMddHHmmssSSS"
-//        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-//        let dateFinal = dateFormatter.date(from: string)!
-//        
-//        print(dateFinal)
-//        
-        
+//        let button = UIButton(type: .roundedRect)
+//        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+//        button.setTitle("Crash", for: [])
+//        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+//        view.addSubview(button)
         
 
         //Request Siri authorization
@@ -40,7 +41,12 @@ class ViewController: UIViewController {
         INVocabulary.shared().setVocabularyStrings(["boarding", "landing", "emergency"], of: .workoutActivityName)
 
     }
-
+    
+    @IBAction func crashButtonTapped(_ sender: UIButton) {
+        
+        Crashlytics.sharedInstance().crash()
+    }
+    
 
 }
 

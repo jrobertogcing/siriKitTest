@@ -1,0 +1,6 @@
+framework module Pods_Intents_Handler_IOSSiriTest {
+  umbrella header "Pods-Intents Handler-IOSSiriTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

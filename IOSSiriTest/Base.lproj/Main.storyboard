@@ -18,19 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-dO-7gg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-dO-7gg">
                                 <rect key="frame" x="96" y="62" width="183" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airport" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-dg-5LN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airport" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-dg-5LN">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-Xm-FFu">
+                                <rect key="frame" x="138" y="122" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="Ghx-F4-qEa"/>
+                                </constraints>
+                                <state key="normal" title="Crash"/>
+                                <connections>
+                                    <action selector="crashButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPE-yz-0Sy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="188" id="4TP-53-9Ls"/>
+                            <constraint firstItem="oLf-dO-7gg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="5ll-ts-J6m"/>
+                            <constraint firstItem="oLf-dO-7gg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="AaD-eq-0ll"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mRf-dg-5LN" secondAttribute="bottom" constant="209" id="HBD-zo-or8"/>
+                            <constraint firstItem="0U7-Xm-FFu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-206.5" id="N5y-5X-NhH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mRf-dg-5LN" secondAttribute="trailing" constant="63" id="RX4-WR-Itl"/>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="gZQ-gf-jbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oLf-dO-7gg" secondAttribute="trailing" constant="96" id="vEd-cB-fSj"/>
+                            <constraint firstItem="0U7-Xm-FFu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y1W-9u-Jaq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -39,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="251"/>
+            <point key="canvasLocation" x="-199.19999999999999" y="250.52473763118442"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="8CP-aO-Kti">

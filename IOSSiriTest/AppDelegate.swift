@@ -8,6 +8,9 @@
 
 import UIKit
 import Intents
+import Firebase
+import Fabric
+import Crashlytics
 
 enum statusSiri:String {
     
@@ -78,33 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        if flagStatus == statusSiri.boarding {
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let boardingVC: BoardingViewController = storyboard.instantiateViewController(withIdentifier: "BoardingViewController") as! BoardingViewController
-//            
-//            self.window?.rootViewController?.present(boardingVC, animated: true, completion: nil)
-//            
-//        } else if flagStatus == statusSiri.landing {
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let landingVC: LandingViewController = storyboard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
-//            
-//            self.window?.rootViewController?.present(landingVC, animated: true, completion: nil)
-//            
-//        } else if flagStatus == statusSiri.emergency {
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let emergencyVC: EmergencyViewController = storyboard.instantiateViewController(withIdentifier: "EmergencyViewController") as! EmergencyViewController
-//
-//            self.window?.rootViewController?.present(emergencyVC, animated: true, completion: nil)
-////
-//        }
-//        
-//        
-//        
-//        
-        
+//        Fabric.with([Crashlytics.self])
+        FirebaseApp.configure()
         
         return true
     }
