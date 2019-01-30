@@ -17,8 +17,18 @@ import Intents
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-class IntentHandler: INExtension, INStartWorkoutIntentHandling, INEndWorkoutIntentHandling {
+class IntentHandler: INExtension, INStartWorkoutIntentHandling, INEndWorkoutIntentHandling, INCreateTaskListIntentHandling {
+    
+    
+    func handle(intent: INCreateTaskListIntent, completion: @escaping (INCreateTaskListIntentResponse) -> Void) {
+      
+        
+        
+    }
+    
    
+    
+    
     
     func handle(intent: INStartWorkoutIntent, completion: @escaping (INStartWorkoutIntentResponse) -> Void) {
         print("Start Work out:", intent )

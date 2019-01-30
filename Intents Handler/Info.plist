@@ -28,6 +28,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>INCreateTaskListIntent</string>
 				<string>INStartWorkoutIntent</string>
 				<string>INEndWorkoutIntent</string>
 			</array>

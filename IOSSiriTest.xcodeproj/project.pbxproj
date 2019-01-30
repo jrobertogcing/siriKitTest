@@ -17,6 +17,7 @@
 		881DADDF21FF9B26009CFFBC /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */; };
 		881DADE121FF9B33009CFFBC /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE021FF9B33009CFFBC /* LandingViewController.swift */; };
 		881DADE321FF9B3C009CFFBC /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */; };
+		881DADE72201189E009CFFBC /* ListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DADE62201189E009CFFBC /* ListsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
 		881DADE021FF9B33009CFFBC /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
+		881DADE62201189E009CFFBC /* ListsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				881DADCD21FF580A009CFFBC /* IOSSiriTest.entitlements */,
 				881DADBB21FF57F3009CFFBC /* AppDelegate.swift */,
+				881DADE62201189E009CFFBC /* ListsManager.swift */,
 				881DADDE21FF9B26009CFFBC /* BoardingViewController.swift */,
 				881DADE021FF9B33009CFFBC /* LandingViewController.swift */,
 				881DADE221FF9B3C009CFFBC /* EmergencyViewController.swift */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				881DADDF21FF9B26009CFFBC /* BoardingViewController.swift in Sources */,
+				881DADE72201189E009CFFBC /* ListsManager.swift in Sources */,
 				881DADBE21FF57F3009CFFBC /* ViewController.swift in Sources */,
 				881DADE121FF9B33009CFFBC /* LandingViewController.swift in Sources */,
 				881DADBC21FF57F3009CFFBC /* AppDelegate.swift in Sources */,
