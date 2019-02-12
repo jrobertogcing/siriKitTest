@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             
         }
         //Add vocabulary
-        INVocabulary.shared().setVocabularyStrings(["boarding", "landing", "emergency"], of: .workoutActivityName)
+        INVocabulary.shared().setVocabularyStrings(["preboarding", "boarding", "emergency"], of: .workoutActivityName)
 
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOSSiriTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-dO-7gg">
@@ -25,12 +25,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airport" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-dg-5LN">
-                                <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-dg-5LN">
+                                <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTe-29-4w3">
+                                <rect key="frame" x="984" y="700" width="128" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="hEE-fi-JzA"/>
+                                    <constraint firstAttribute="height" constant="134" id="inH-PE-zSD"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ySq-Za-Eep" kind="show" id="hCt-g5-leM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-cN-hVZ">
+                                <rect key="frame" x="0.0" y="700" width="128" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="0RL-YO-vf4"/>
+                                    <constraint firstAttribute="width" constant="128" id="eX3-2W-8TT"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="MW4-G3-Qqd" kind="show" id="e35-H4-WaW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RTe-29-4w3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2z7-nv-3Bb"/>
+                            <constraint firstItem="c4H-cN-hVZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CWi-vS-xCp"/>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rz5-P1-l2n"/>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="U0z-ag-zEk"/>
+                            <constraint firstItem="c4H-cN-hVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z2M-P6-6vC"/>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gHp-lA-lP2"/>
+                            <constraint firstItem="RTe-29-4w3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tAX-tV-ic4"/>
+                            <constraint firstItem="mRf-dg-5LN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zzV-bP-T1g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -39,14 +68,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="251"/>
+            <point key="canvasLocation" x="-199.10071942446044" y="250.35971223021585"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="8CP-aO-Kti">
             <objects>
                 <viewController storyboardIdentifier="LandingViewController" id="MW4-G3-Qqd" customClass="LandingViewController" customModule="IOSSiriTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eKB-cs-FG7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Landing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AU-HL-hRz">
@@ -56,12 +85,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landing" translatesAutoresizingMaskIntoConstraints="NO" id="3m8-Rt-KlE">
-                                <rect key="frame" x="62" y="222" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abordaje" translatesAutoresizingMaskIntoConstraints="NO" id="O1k-gp-Jx2">
+                                <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5r-FQ-DV3">
+                                <rect key="frame" x="984" y="32" width="128" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="8Py-KT-bbl"/>
+                                    <constraint firstAttribute="height" constant="122" id="hx4-qO-A9u"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="5GS-ZP-7Ax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O1k-gp-Jx2" firstAttribute="top" secondItem="1jd-84-B46" secondAttribute="top" constant="12" id="1Kh-ac-ICw"/>
+                            <constraint firstAttribute="bottom" secondItem="O1k-gp-Jx2" secondAttribute="bottom" id="qE6-rF-T0R"/>
+                            <constraint firstItem="O1k-gp-Jx2" firstAttribute="leading" secondItem="1jd-84-B46" secondAttribute="leading" id="sIR-mh-RBT"/>
+                            <constraint firstItem="w5r-FQ-DV3" firstAttribute="top" secondItem="1jd-84-B46" secondAttribute="top" constant="12" id="stO-7o-3gv"/>
+                            <constraint firstItem="1jd-84-B46" firstAttribute="bottom" secondItem="w5r-FQ-DV3" secondAttribute="bottom" constant="680" id="sxD-eg-l5b"/>
+                            <constraint firstItem="1jd-84-B46" firstAttribute="trailing" secondItem="w5r-FQ-DV3" secondAttribute="trailing" id="udr-Mv-rXM"/>
+                            <constraint firstItem="O1k-gp-Jx2" firstAttribute="trailing" secondItem="1jd-84-B46" secondAttribute="trailing" id="xVk-0e-CvR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1jd-84-B46"/>
                     </view>
                 </viewController>
@@ -74,7 +121,7 @@
             <objects>
                 <viewController storyboardIdentifier="EmergencyViewController" id="f2k-rC-bBP" customClass="EmergencyViewController" customModule="IOSSiriTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSX-zf-j5a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-bY-ZjQ">
@@ -84,25 +131,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emergency" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-7q-KhE">
-                                <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-7q-KhE">
+                                <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iZ-7q-KhE" firstAttribute="bottom" secondItem="T7S-lv-mRD" secondAttribute="bottom" id="6kb-dP-5Do"/>
+                            <constraint firstItem="5iZ-7q-KhE" firstAttribute="trailing" secondItem="T7S-lv-mRD" secondAttribute="trailing" id="KGf-qf-TMM"/>
+                            <constraint firstItem="5iZ-7q-KhE" firstAttribute="leading" secondItem="T7S-lv-mRD" secondAttribute="leading" id="Qz5-M0-aUE"/>
+                            <constraint firstItem="5iZ-7q-KhE" firstAttribute="top" secondItem="T7S-lv-mRD" secondAttribute="top" constant="12" id="sDm-sk-yrw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T7S-lv-mRD"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUB-km-S4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1002.5487256371815"/>
+            <point key="canvasLocation" x="995.50359712230215" y="1002.1582733812951"/>
         </scene>
         <!--Boarding View Controller-->
         <scene sceneID="sEw-9h-zzc">
             <objects>
                 <viewController storyboardIdentifier="BoardingViewController" id="ySq-Za-Eep" customClass="BoardingViewController" customModule="IOSSiriTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lk-X2-sQl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suL-6D-GCd">
@@ -112,9 +164,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boarding" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-02-AVB">
-                                <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preabordaje" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-02-AVB">
+                                <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-w3-g21">
                                 <rect key="frame" x="50" y="152" width="274" height="48"/>
@@ -123,8 +174,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enG-RF-LI1">
+                                <rect key="frame" x="984" y="32" width="128" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="dBm-Ga-Phi"/>
+                                    <constraint firstAttribute="height" constant="122" id="gpU-Op-DmF"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lOp-r9-KJh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="enG-RF-LI1" firstAttribute="trailing" secondItem="aD7-Z8-CR0" secondAttribute="trailing" id="2if-go-cdf"/>
+                            <constraint firstItem="enG-RF-LI1" firstAttribute="top" secondItem="aD7-Z8-CR0" secondAttribute="top" constant="12" id="Ktz-jw-Yqd"/>
+                            <constraint firstItem="DgW-02-AVB" firstAttribute="trailing" secondItem="aD7-Z8-CR0" secondAttribute="trailing" id="PoF-fG-Orx"/>
+                            <constraint firstItem="DgW-02-AVB" firstAttribute="leading" secondItem="aD7-Z8-CR0" secondAttribute="leading" id="ch6-6t-9Ds"/>
+                            <constraint firstItem="DgW-02-AVB" firstAttribute="bottom" secondItem="aD7-Z8-CR0" secondAttribute="bottom" id="ed7-0s-lUx"/>
+                            <constraint firstItem="DgW-02-AVB" firstAttribute="top" secondItem="aD7-Z8-CR0" secondAttribute="top" constant="12" id="tdu-aY-IYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aD7-Z8-CR0"/>
                     </view>
                     <connections>
@@ -133,13 +202,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6E-QJ-v2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="-493.40329835082463"/>
+            <point key="canvasLocation" x="995.50359712230215" y="-493.52517985611513"/>
         </scene>
     </scenes>
     <resources>
-        <image name="airport" width="342" height="341"/>
-        <image name="boarding" width="1300" height="1040"/>
-        <image name="emergency" width="384" height="210"/>
-        <image name="landing" width="234" height="116.81999969482422"/>
+        <image name="abordaje" width="631" height="465"/>
+        <image name="home" width="595" height="434"/>
+        <image name="preabordaje" width="895" height="586"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5GS-ZP-7Ax"/>
+    </inferredMetricsTieBreakers>
 </document>
