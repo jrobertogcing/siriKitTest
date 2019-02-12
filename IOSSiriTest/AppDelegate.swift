@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print(intName.spokenPhrase)
             
-            if intName.spokenPhrase == "boarding" {
+            if intName.spokenPhrase == "preboarding" {
                 
                flagStatus = statusSiri.boarding
                 
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController?.present(boardingVC, animated: true, completion: nil)
                 
 
-            } else if intName.spokenPhrase == "landing" {
+            } else if intName.spokenPhrase == "boarding" {
                 
                 flagStatus = statusSiri.landing
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
