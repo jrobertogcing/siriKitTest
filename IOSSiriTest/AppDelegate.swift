@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print(intName.spokenPhrase)
             
-            if intName.spokenPhrase == "preabarodaje" {
+            if intName.spokenPhrase == "pre abordaje" {
                 
                flagStatus = statusSiri.boarding
                 
