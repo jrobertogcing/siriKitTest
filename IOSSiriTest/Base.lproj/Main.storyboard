@@ -167,13 +167,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preabordaje" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-02-AVB">
                                 <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-w3-g21">
-                                <rect key="frame" x="50" y="152" width="274" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enG-RF-LI1">
                                 <rect key="frame" x="984" y="32" width="128" height="122"/>
                                 <constraints>
@@ -184,14 +177,26 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="lOp-r9-KJh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-w3-g21">
+                                <rect key="frame" x="20" y="20" width="146" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BwE-iD-mcc"/>
+                                    <constraint firstAttribute="width" constant="146" id="sP5-27-Xwc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="enG-RF-LI1" firstAttribute="trailing" secondItem="aD7-Z8-CR0" secondAttribute="trailing" id="2if-go-cdf"/>
+                            <constraint firstItem="NtC-w3-g21" firstAttribute="top" secondItem="aD7-Z8-CR0" secondAttribute="top" id="HQX-XV-1ES"/>
                             <constraint firstItem="enG-RF-LI1" firstAttribute="top" secondItem="aD7-Z8-CR0" secondAttribute="top" constant="12" id="Ktz-jw-Yqd"/>
                             <constraint firstItem="DgW-02-AVB" firstAttribute="trailing" secondItem="aD7-Z8-CR0" secondAttribute="trailing" id="PoF-fG-Orx"/>
                             <constraint firstItem="DgW-02-AVB" firstAttribute="leading" secondItem="aD7-Z8-CR0" secondAttribute="leading" id="ch6-6t-9Ds"/>
                             <constraint firstItem="DgW-02-AVB" firstAttribute="bottom" secondItem="aD7-Z8-CR0" secondAttribute="bottom" id="ed7-0s-lUx"/>
+                            <constraint firstItem="NtC-w3-g21" firstAttribute="leading" secondItem="aD7-Z8-CR0" secondAttribute="leading" constant="20" id="gcq-y0-yBY"/>
                             <constraint firstItem="DgW-02-AVB" firstAttribute="top" secondItem="aD7-Z8-CR0" secondAttribute="top" constant="12" id="tdu-aY-IYZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aD7-Z8-CR0"/>
@@ -211,6 +216,6 @@
         <image name="preabordaje" width="895" height="586"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5GS-ZP-7Ax"/>
+        <segue reference="lOp-r9-KJh"/>
     </inferredMetricsTieBreakers>
 </document>
