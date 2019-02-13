@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print(intName.spokenPhrase)
             
-            if intName.spokenPhrase == "preabordaje" {
+            if intName.spokenPhrase == "pre abordaje" {
                 
                flagStatus = statusSiri.boarding
                 
@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController?.present(landingVC, animated: true, completion: nil)
 
                 
-            } else if intName.spokenPhrase == "emergencia" {
+            } else if intName.spokenPhrase == "emergencía" {
                 
                 flagStatus = statusSiri.emergency
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

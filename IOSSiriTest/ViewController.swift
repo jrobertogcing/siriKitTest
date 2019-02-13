@@ -19,25 +19,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let string = "2018080600000000"
-//        let dateFormatter:DateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyyMMddHHmmssSSS"
-//        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-//        let dateFinal = dateFormatter.date(from: string)!
-//        
-//        print(dateFinal)
-//        
-        
-        
-
         //Request Siri authorization
         INPreferences.requestSiriAuthorization { (status) in
             
             print(status)
             
         }
+        // Comando ejemplo : Empezar entrenamiento de abordaje en Aeromexico
         //Add vocabulary
-        INVocabulary.shared().setVocabularyStrings(["cat", "preabordaje", "abordaje", "emergencia"], of: .workoutActivityName)
+        INVocabulary.shared().setVocabularyStrings(["cat", "pre abordaje", "abordaje", "emergencia"], of: .workoutActivityName)
 
     }
 
