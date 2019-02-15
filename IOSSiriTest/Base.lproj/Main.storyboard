@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abordaje" translatesAutoresizingMaskIntoConstraints="NO" id="O1k-gp-Jx2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guias" translatesAutoresizingMaskIntoConstraints="NO" id="O1k-gp-Jx2">
                                 <rect key="frame" x="0.0" y="32" width="1112" height="802"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5r-FQ-DV3">
@@ -211,11 +211,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="abordaje" width="631" height="465"/>
+        <image name="guias" width="1062" height="766"/>
         <image name="home" width="595" height="434"/>
         <image name="preabordaje" width="895" height="586"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lOp-r9-KJh"/>
+        <segue reference="5GS-ZP-7Ax"/>
     </inferredMetricsTieBreakers>
 </document>
