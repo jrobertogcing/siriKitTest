@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController?.present(boardingVC, animated: true, completion: nil)
                 
 
-            } else if intName.spokenPhrase == "abordaje" {
+            } else if intName.spokenPhrase == "guías maestras" {
                 
                 flagStatus = statusSiri.landing
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

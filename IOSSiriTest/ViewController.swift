@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         }
         // Comando ejemplo : Empezar entrenamiento de abordaje en Aeromexico
         //Add vocabulary
-        INVocabulary.shared().setVocabularyStrings(["cat", "pre abordaje", "abordaje", "emergencia"], of: .workoutActivityName)
+        INVocabulary.shared().setVocabularyStrings(["cat", "pre abordaje", "guías maestras", "emergencia"], of: .workoutActivityName)
 
     }
 
